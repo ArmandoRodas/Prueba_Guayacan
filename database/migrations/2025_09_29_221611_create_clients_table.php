@@ -6,18 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
     public function up(): void {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('clients', function (Blueprint $table) {
             $table->unsignedBigInteger('id', true);
-            $table->string('name', 120);
-            $table->string('email', 190)->unique()->nullable();
+            $table->string('first_name', 120);
+            $table->string('last_name', 120)->nullable();
+            $table->string('tax_id', 30)->nullable();
             $table->string('phone', 30)->nullable();
-            $table->enum('role', ['technician','admin','frontdesk'])->default('technician');
-            $table->boolean('is_active')->default(true);
+            $table->string('email', 190)->nullable();
+            $table->string('address', 255)->nullable();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
     }
-    public function down(): void {
-        Schema::dropIfExists('users');
-    }
+    public function down(): void { Schema::dropIfExists('clients'); }
 };
