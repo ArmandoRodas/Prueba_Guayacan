@@ -9,14 +9,14 @@ class BinomioController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $n = null;         // potencia
-        $coef = null;      // coeficientes de Pascal para n
-        $expansion = null; // texto del desarrollo simbólico
+        $n = null;         
+        $coef = null;     
+        $expansion = null; 
 
         if ($request->isMethod('post')) {
-            // Solo pedimos n
+           
             $data = $request->validate([
-                'n' => 'required|integer|min:0|max:20', // 20 para que no salga enorme
+                'n' => 'required|integer|min:0|max:20', // 20 para que no salga demasiado grande
             ]);
 
             $n = (int) $data['n'];
@@ -27,9 +27,9 @@ class BinomioController extends Controller
             // 2) Construimos el desarrollo simbólico (a+b)^n
             $terminos = [];
             for ($k = 0; $k <= $n; $k++) {
-                $c = $coef[$k];        // coeficiente
-                $aExp = $n - $k;       // exponente de a
-                $bExp = $k;            // exponente de b
+                $c = $coef[$k];       
+                $aExp = $n - $k;       
+                $bExp = $k;            
 
                 $partes = [];
                 if ($c != 1) $partes[] = (string)$c;

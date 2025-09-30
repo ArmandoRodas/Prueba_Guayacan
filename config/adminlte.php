@@ -300,7 +300,7 @@ return [
 
     'menu' => [
         [
-        'header' => 'ALGORITMOS',
+        'header' => 'Fase 1:ALGORITMOS',
     ],
     [
         'text' => 'Factorial',
@@ -316,6 +316,53 @@ return [
         'text' => 'Binomio',
         'route'=> 'alg.binomio',
         'icon' => 'fas fa-superscript',
+    ],
+     [
+        'header' => 'Fase 1-2: FORMULARIOS',
+    ],
+    [
+    'text' => 'Marcas',
+    'route'=> 'brands.index',
+    'icon' => 'fas fa-tags',
+    ],  
+    [
+    'text' => 'Tipos de equipo',
+    'route'=> 'device-types.index',
+    'icon' => 'fas fa-mobile-alt',
+    ],
+     [
+     'header' => 'CLIENTES',
+     ],
+    [
+    'text' => 'Clientes',
+    'route'=> 'clients.index',
+    'icon' => 'fas fa-users',
+    ],
+    [
+    'header' => 'ADMINISTRACIÓN',
+    ],
+    [
+    'text' => 'Usuarios',
+    'route'=> 'users.index',
+    'icon' => 'fas fa-user-cog',
+    ],
+     [
+    'header' => 'CONFIGURACIÓN',
+    ],
+    [
+    'text' => 'Estados de servicio',
+    'route'=> 'service-statuses.index',
+    'icon' => 'fas fa-tasks',
+    ],
+    [
+    'text' => 'Equipos',
+    'route'=> 'devices.index',
+    'icon' => 'fas fa-desktop',
+    ],
+    [
+    'text' => 'Servicios',
+    'route'=> 'services.index',
+    'icon' => 'fas fa-tools',
     ],
     ],
 

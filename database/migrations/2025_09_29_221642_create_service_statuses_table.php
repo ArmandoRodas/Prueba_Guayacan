@@ -4,24 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
+return new class extends Migration {
+    public function up(): void {
         Schema::create('service_statuses', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->unsignedSmallInteger('id', true);
+            $table->string('code', 40);
+            $table->string('label', 120);
+
+            $table->unique('code', 'uq_service_statuses_code');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('service_statuses');
-    }
+    public function down(): void { Schema::dropIfExists('service_statuses'); }
 };
