@@ -1,9 +1,9 @@
-Taller de Servicios – Laravel + AdminLTE
+TALLER DE SERVICIOS – Laravel + AdminLTE
 
 Sistema web para administrar un taller de reparación de equipos (laptops, smartphones, impresoras, etc.).
 Permite registrar clientes y sus dispositivos, crear servicios con su estado y llevar el detalle de ítems (repuestos/mano de obra) asociados a cada servicio.
 
-🧩 Módulos principales
+🧩 MODULOS PRINCIPALES
 
 Clientes: alta/edición/baja y búsqueda.
 
@@ -19,7 +19,7 @@ Algoritmos (demo): factorial, amortización y binomio (para la prueba técnica).
 
 UI basada en AdminLTE (Laravel-AdminLTE) y assets compilados con Vite.
 
-🛠 Tecnologías
+🛠 TECNOLOGIAS
 
     - PHP 8.2+ / Laravel 10–12
 
@@ -30,9 +30,9 @@ UI basada en AdminLTE (Laravel-AdminLTE) y assets compilados con Vite.
     - Laravel-AdminLTE
 
     - Vite
-
-✅ Requisitos previos
-
+------------------
+✅ REQUISITOS
+-------------------
     -   PHP 8.2+ con extensiones comunes (mbstring, intl, pdo_mysql, etc.)
 
     -   MySQL/MariaDB en marcha y una base de datos creada (p. ej. taller).
@@ -43,8 +43,9 @@ UI basada en AdminLTE (Laravel-AdminLTE) y assets compilados con Vite.
 
     -   Composer y npm instalados.
 
-
-🚀 Instalación y arranque
+--------------------------
+////////////////////////////
+🚀 INSTALACION Y ARRANQUE
 # 1) Clonar
 git clone <URL-del-repo> taller-servicios
 cd taller-servicios
@@ -82,7 +83,10 @@ npm run dev        # entorno de desarrollo (con Vite)
 php artisan serve
 Abre: http://127.0.0.1:8000
 
-🧭 Navegación rápida (rutas útiles)
+
+-----------------------------------
+///////////////////////////////////
+🧭 NAVEGACION RAPIDA (rutas útiles)
 
 Dashboard: /
 
@@ -107,8 +111,9 @@ Binomio: /algoritmos/binomio
 
 El menú lateral de AdminLTE ya apunta a estos módulos (configurable en config/adminlte.php, clave menu).
 
-
-🏃‍♂️ Flujo de uso recomendado
+------------------------------
+🏃‍♂️ FLUJO DE USO RECOMENDADO
+------------------------------
 
 Crear estados de servicio (p. ej. Recibido, Reparando, Finalizado, Entregado).
 
@@ -122,7 +127,9 @@ Dentro del servicio, agregar ítems (repuestos/mano de obra) para calcular costo
 
 Actualizar el estado a medida que avance la reparación.
 
-🗄️ Esquema de datos (resumen)
+------------------------------
+///////////////////////////////
+🗄️ ESQUEMA DE DATOS (resumen)
 
     - clients — datos del cliente.
 
@@ -138,7 +145,9 @@ Actualizar el estado a medida que avance la reparación.
 
     - users — técnicos/operadores (si lo usas con login y roles).
 
-    ⚙️ Configuración de AdminLTE
+------------------------------------------------
+//////////////////////////////////////////////
+    ⚙️ CONFIGURACION DE ADMINLTE
 
 Ruta de inicio (dashboard): configurada a / en routes/web.php.
 
@@ -147,8 +156,9 @@ Menú lateral y título del panel: config/adminlte.php (clave menu y title).
 Si quieres ocultar/mostrar módulos, edita ese archivo.
 
 
-
-ℹ️ Notas y consejos
+----------------------
+//////////////////////
+ℹ️ NOTAS Y CONSEJOS
 
 Separadores decimales: el sistema normaliza comas/puntos (24,00 ↔ 24.00) al guardar ítems.
 
@@ -156,8 +166,9 @@ Sesiones y caché en DB: si en .env usas SESSION_DRIVER=database y/o CACHE_DRIVE
 
 Prod: usa npm run build y configura un servidor web (Nginx/Apache) apuntando a public/.
 
-
+----------------------
 🧪 Troubleshooting
+----------------------
 
 Vite/Node error: “Vite requires Node.js >=20.19 or >=22”
 → Instala Node 20.19+ o 22.x y vuelve a correr npm install && npm run dev.
@@ -168,5 +179,6 @@ Tabla sessions/cache no existe → ejecuta php artisan session:table && php arti
 
 
 
-
+//////////////////////////////////////////////
 " Si puedes imaginarlo, Puedes programarlo..."
+/////////////////////////////////////////////
